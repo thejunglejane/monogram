@@ -37,6 +37,7 @@ nnoremap <silent> <leader>\ :nohlsearch<CR>
 " Folding {{{
 set foldenable                                          " enable folding
 set foldmethod=indent                                   " fold based on indent level
+set foldlevelstart=99                                   " start with all folds open by default
 " }}}
 
 " AutoGroups {{{
