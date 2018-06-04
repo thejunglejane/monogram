@@ -11,4 +11,4 @@ if [ $? = 0 ]; then
     monogram checkout 2>&1 | egrep "\s+\." | awk {'print $1'} | xargs -I{} mv {} .monogram-backup/{}
 fi;
 monogram checkout
-monogram monogram status.showUntrackedFiles no
+monogram config status.showUntrackedFiles no
