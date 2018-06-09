@@ -1,6 +1,6 @@
 # Enable bash-completion
 if [ -f $(brew --prefix)/etc/bash_completion ]; then
-  . $(brew --prefix)/etc/bash_completion
+    . $(brew --prefix)/etc/bash_completion
 fi
 
 # Bash completion extensions
@@ -23,7 +23,7 @@ export PIP_REQUIRE_VIRTUALENV=true
 export PIP_DOWNLOAD_CACHE=$HOME/.pip/cache
 
 syspip(){
-   PIP_REQUIRE_VIRTUALENV="" pip "$@"
+    PIP_REQUIRE_VIRTUALENV="" pip "$@"
 }
 
 # virtualenv-wrapper
@@ -41,3 +41,12 @@ fi
 
 # added by travis gem
 [ -f /Users/jane/.travis/travis.sh ] && source /Users/jane/.travis/travis.sh
+
+# RVM-related hocus pocus
+if [ -s $HOME/.profile ]; then
+    source $HOME/.profile  # load the default .profiles
+fi
+
+if [ -s $HOME/.rvm/sripts/rvm ]; then
+    source $HOME/.rvm/sripts/rvm  # load RVM into the shell session *as a function*
+fi
