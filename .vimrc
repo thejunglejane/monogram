@@ -60,5 +60,16 @@ let g:NERDDefaultAlign = 'left'                         " align line-wise commen
 let g:NERDTrimTrailingWhitespace = 1                    " trim trailing whitespace when uncommenting lines
 " }}}
 
+" NERDTree {{{
+" toggle NERDTree
+noremap \ :NERDTreeToggle<CR>
+" open NERDTree at the current file
+noremap \| :NERDTreeFind<CR>
+
+let g:NERDTreeNodeDelimiter = "\u00a0"                  " workaround from https://github.com/scrooloose/nerdtree/issues/928
+
+let NERDTreeIgnore = ['^\.pyc$','^\.swp$']
+" }}}
+
 set modelines=1                                         " only use fold settings for this file
 " vim:foldmethod=marker:foldlevel=0
