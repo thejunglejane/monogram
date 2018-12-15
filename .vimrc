@@ -43,7 +43,7 @@ set foldlevelstart=99                                   " start with all folds o
 " AutoGroups {{{
 augroup configgroup
     autocmd!
-    autocmd FileType python setlocal colorcolumn=72,80  " add docstring and line length rulers
+    autocmd FileType python setlocal colorcolumn=72,79  " add docstring and line length rulers
 augroup END
 " }}}
 
@@ -56,7 +56,7 @@ let g:lightline = {'colorscheme': 'wombat'}
 
 " NERDCommenter {{{
 let g:NERDSpaceDelims = 1                               " add spaces after comment delimiters by default
-let g:NERDDefaultAlignt = 'left'                        " align line-wise comment delimiters flush left
+let g:NERDDefaultAlign = 'left'                         " align line-wise comment delimiters flush left
 let g:NERDTrimTrailingWhitespace = 1                    " trim trailing whitespace when uncommenting lines
 " }}}
 
